@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="test@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="book"/>
+    <schema id="3" parent="1" name="dangdang"/>
+    <schema id="4" parent="1" name="du"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="mail"/>
+    <schema id="7" parent="1" name="mysql"/>
+    <schema id="8" parent="1" name="test">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="9" parent="1" name="weka"/>
+    <table id="10" parent="8" name="address"/>
+    <table id="11" parent="8" name="users"/>
+    <table id="12" parent="8" name="users1"/>
+    <routine id="13" parent="8" name="p">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <column id="14" parent="10" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="15" parent="10" name="name">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <key id="16" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="17" parent="11" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="18" parent="11" name="name">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="19" parent="11" name="password">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="20" parent="11" name="aid">
+      <Position>4</Position>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="21" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="22" parent="11" name="aidkey">
+      <ColNames>aid</ColNames>
+      <RefSchemaName>test</RefSchemaName>
+      <RefTableName>address</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="23" parent="12" name="id">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="24" parent="12" name="name">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="25" parent="12" name="password">
+      <Position>3</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <key id="26" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <argument id="27" parent="13" name="tmp_sno">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+    </argument>
+    <argument id="28" parent="13" name="pro_name">
+      <Position>2</Position>
+      <DataType>CHAR(10)|1</DataType>
+    </argument>
+  </database-model>
+</dataSource>
