@@ -1,0 +1,8 @@
+<struts>
+    <package name="default" namespace="/user" extends="struts-default">
+        <action name="login" class="com_action.UserAction" method="login">
+            <result name="success">/success.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+    </package>
+</struts>
